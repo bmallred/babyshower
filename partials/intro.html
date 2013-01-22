@@ -1,0 +1,84 @@
+<div class="rsvp panel">
+    <div class="front">
+        <p id="invite">
+            <span style="font-size: 20pt; margin-left: 1em;">You are invited to</span><br />
+            <span style="font-size: 42pt; margin-left: 2em">A Baby B-B-Q</span><br />
+            <span style="font-size: 18pt; margin-left: 10em;">with hopefully no showers!</span>
+        </p>
+
+        <table id="information" class="center">
+            <tbody>
+                <tr>
+                    <td class="text-top-left bold"><span>When</span></td>
+                    <td class="text-top-left" style="padding-left: 0.5em;">
+                        <span>November 3<sup>rd</sup>, 2012<span>
+                        <span>at 2:00 p.m. EST</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-top-left bold"><span>Location</span></td>
+                    <td class="text-top-left" style="padding-left: 0.5em;">
+                        <a href="http://goo.gl/maps/NkxmN">The &lt;name&gt; Household</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-top-left bold"><span>Registries</span></td>
+                    <td class="text-top-left" style="padding-left: 0.5em;">
+                        <a href="http://www.toysrus.com/registry/">Babies'R'Us</a>
+                        <span> and </span>
+                        <a href="http://www.target.com/">Target</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttons center">
+            <button type="button" class="button blue" ng-click="rsvp($event)" title="Let us know if you can make it"><span>RSVP Now!</span></button>
+        </div>
+    </div>
+    <div class="back">
+        <form id="rsvpForm" ng-submit="submit($event)">
+            <table class="center">
+                <tbody>
+                    <tr>
+                        <td class="text-left"><span>Are you going?</span></td>
+                        <td class="text-right">
+                            <select name="rsvpAttending" ng-model="attending" ng-options="i.name for i in attendanceValues"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span>First name</span></td>
+                        <td><input type="text" name="rsvpFirstName" maxlength="20" placeholder="Bruce" required="required" ng-model="firstName" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span>Last name</span></td>
+                        <td><input type="text" name="rsvpLastName" maxlength="20" placeholder="Campbell" required="required" ng-model="lastName" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span>Phone</span></td>
+                        <td><input type="tel" name="rsvpPhone" placeholder="727-867-5309" ng-model="phone" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span>Email address</span></td>
+                        <td><input type="email" name="rsvpEmail" placeholder="bubba@hotep.com" ng-model="email" /></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><span>Number of guests</span></td>
+                        <td class="text-right">
+                            <select name="rsvpGuests" ng-model="guests" ng-options="i.name for i in guestsValues"></select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="buttons center">
+                <button type="button" class="button red" ng-click="back($event)" title="I just want to spin..."><span>Back</span></button>
+                <button type="submit" class="button green" title="I'm on my way!"><span>Submit</span></button>
+            </div>
+
+            <div class="center" style="font-size: small;">
+                <p>We respect your privacy and promise not to misuse the data you give us.</p>
+            </div>
+        </form>
+    </div>
+</div>
