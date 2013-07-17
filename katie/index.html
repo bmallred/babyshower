@@ -42,7 +42,6 @@
 		</style>
 	</head>
 	<body>
-		<header></header>
 		<div id="main">
 			<div id="content" class="white-border">
 				<div class="black-border">
@@ -63,9 +62,21 @@
 						Call or email Beth at <a href="tel:803-230-6302" title="By phone">(803) 230-6302</a> or
 						<a href="mailto:beejenks@gmail.com" title="By e-mail">beejenks@gmail.com</a>
 					</p>
+
+					<div class="fb-comments" data-href="http://nvite.us/katie" data-width="400" data-num-posts="10"></div>
 				</div>
 			</div>
 		</div>
-		<footer></footer>
+
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+		  		var js, fjs = d.getElementsByTagName(s)[0];
+		  		if (d.getElementById(id)) return;
+		  		js = d.createElement(s); js.id = id;
+		  		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  		fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 	</body>
 </html>
